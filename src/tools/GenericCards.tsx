@@ -1,4 +1,5 @@
 import { Card } from "flowbite-react";
+import React from "react";
 
 interface GenericCardsProps {
 	title: string;

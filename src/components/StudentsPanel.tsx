@@ -5,7 +5,7 @@ import StudentsGraphic from "@/tools/StudentsGraphic";
 const StudentsPanel = () => {
 	return (
 		<>
-			<div className="flex flex-row gap-4">
+			<div className="flex flex-col gap-4 w-[30%] p-4">
 				<GenericCards
 					title="Students Panel"
 					description="This is the students panel">

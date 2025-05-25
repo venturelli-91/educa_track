@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "flowbite-react";
-import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const data = [
 	{ name: "Feminino", percentual: 30 },
@@ -11,23 +11,32 @@ const data = [
 
 export default function StudentsGraphic() {
 	return (
-		<Card>
-			<ResponsiveContainer
-				width="100%"
-				height="100%">
-				<PieChart>
-					<Pie
-						data={data}
-						dataKey="percentual"
-						nameKey="name"
-						cx="50%"
-						cy="50%"
-						outerRadius={100}
-						fill="#8884d8"
-						label
-					/>
-				</PieChart>
-			</ResponsiveContainer>
-		</Card>
+		<div className="w-[100%] h-[500px] p-4">
+			<Card className="h-full">
+				<h3 className="text-xl font-bold mb-4 flex justify-center">
+					Distribuição por Gênero
+				</h3>
+				<div className="h-[400px]">
+					<ResponsiveContainer
+						width="100%"
+						height="100%">
+						<PieChart>
+							<Pie
+								data={data}
+								dataKey="percentual"
+								nameKey="name"
+								cx="50%"
+								cy="50%"
+								outerRadius={100}
+								fill="#8884d8"
+								label
+							/>
+							<Tooltip />
+							<Legend />
+						</PieChart>
+					</ResponsiveContainer>
+				</div>
+			</Card>
+		</div>
 	);
 }

@@ -5,7 +5,7 @@ import GradesBar from "@/tools/GradesBar";
 const GradesPanel = () => {
 	return (
 		<>
-			<div className="flex flex-row gap-4">
+			<div className="flex flex-col gap-4 w-[30%] p-4">
 				<GenericCards
 					title="Grades Panel"
 					description="This is the grades panel">

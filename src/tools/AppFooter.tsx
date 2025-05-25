@@ -4,6 +4,7 @@ import {
 	FooterLink,
 	FooterLinkGroup,
 } from "flowbite-react";
+import React from "react";
 
 export default function AppFooter() {
 	return (
